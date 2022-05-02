@@ -1,3 +1,5 @@
+package jniexamples.helloworld;
+
 public class HelloWorld {
 
     static {

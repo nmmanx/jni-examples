@@ -2,8 +2,8 @@
 #include <jni.h>
 /* Header for class HelloWorld */
 
-#ifndef _Included_HelloWorld
-#define _Included_HelloWorld
+#ifndef _Included_jniexamples_helloworld_HelloWorld
+#define _Included_jniexamples_helloworld_HelloWorld
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -12,7 +12,7 @@ extern "C" {
  * Method:    helloNative
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_HelloWorld_helloNative
+JNIEXPORT void JNICALL Java_jniexamples_helloworld_HelloWorld_helloNative
   (JNIEnv *, jclass);
 
 #ifdef __cplusplus
