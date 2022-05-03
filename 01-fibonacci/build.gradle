@@ -1,0 +1,25 @@
+plugins {
+    id 'cpp-library'
+    id 'application'
+}
+
+application {
+    mainClass = 'jniexamples.fibo.Main'
+}
+
+library {
+    targetMachines.add(machines.linux.x86_64)
+    linkage = [Linkage.SHARED]
+    baseName = 'fibonacci'
+}
+
+tasks.withType(CppCompile).configureEach {
+    compilerArgs.add '-fPIC'
+    compilerArgs.add "-I${org.gradle.internal.jvm.Jvm.current().javaHome}/include"
+    compilerArgs.add "-I${org.gradle.internal.jvm.Jvm.current().javaHome}/include/linux"
+}
+
+run {
+    systemProperty "java.library.path", file("${buildDir}/lib/main/release").absolutePath
+    args = ['10', '2']
+}
