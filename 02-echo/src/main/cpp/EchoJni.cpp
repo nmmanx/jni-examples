@@ -1,5 +1,6 @@
 #include <jni.h>
 #include <iostream>
+#include <assert.h>
 
 #define ECHO_CLASS          "jniexamples/echo/Echo"
 #define JAVAOBJECT_CLASS    "jniexamples/echo/JavaObject"
@@ -7,7 +8,10 @@
 static jstring getJavaObjectName(JNIEnv *env, jobject obj)
 {
     jclass javaObjClazz = env->FindClass(JAVAOBJECT_CLASS);
+    assert(javaObjClazz != NULL);
+
     jmethodID methodId = env->GetMethodID(javaObjClazz, "getName", "()Ljava/lang/String;");
+    assert(methodId != NULL);
 
     return (jstring)env->CallObjectMethod(obj, methodId);
 }
