@@ -10,3 +10,11 @@ Then, run it with:
 ```bash
 ./gradlew run -p 00-helloworld
 ```
+
+### Example list
+|#| Example         | Aims          |
+|-| --------------- | --------------- |
+|1| 00-helloworld   | Using JNIEXPORT and JNICALL macros to declare native methods
+|2| 01-fibonacci    | Using env->RegisterNatives() instead of JNIEXPORT & JNICALL macros
+|3| 02-echo         | Work with many native types: jint, jshort, jlong, jfloat, jdouble, jstring, jboolean, jobject,...
+|4| 03-factory      | Work with jmethodID and jfieldID, create a Java object in native code and return back to JVM |
