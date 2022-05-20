@@ -13,8 +13,4 @@ public class Main {
         showProduct(a);
         showProduct(b);
     }
-
-    static {
-        System.loadLibrary("factory");
-    }
 }

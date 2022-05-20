@@ -13,6 +13,6 @@ class Factory {
     }
 
     static {
-        //System.loadLibrary("factory");
+        System.loadLibrary("factory");
     }
 }
