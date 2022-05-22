@@ -9,4 +9,4 @@
 
 rootProject.name = 'jni-examples'
 
-include('00-helloworld', '01-fibonacci', '02-echo', '03-factory')
+include('00-helloworld', '01-fibonacci', '02-echo', '03-factory', '04-exceptions')
