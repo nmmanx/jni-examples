@@ -12,7 +12,7 @@ Then, run it with:
 ```
 
 ### Example list
-|#| Example         | Aims          |
+|#| Example &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Aims |
 |-| --------------- | --------------- |
 |1| 00-helloworld   | Using JNIEXPORT and JNICALL macros to declare native methods
 |2| 01-fibonacci    | Using env->RegisterNatives() instead of JNIEXPORT & JNICALL macros
